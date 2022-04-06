@@ -38,9 +38,9 @@ enum sorting{
 int main(){
     time_st start, end;
 
-    long result[NUM_OF_SORTING][3] = {0, }; 
+    long result[NUM_OF_SORTING][4] = {0, }; 
 
-    const int N[3] = {100, 1000, 10000};
+    const int N[4] = {100, 1000, 10000, 100000};
 
     const char sortingNames[NUM_OF_SORTING][10] = {
         "Bubble",
@@ -53,7 +53,7 @@ int main(){
     };
 
     // BubbleSort
-    for(int n = 0; n < 3; n++){
+    for(int n = 0; n < 4; n++){
         int* input = malloc(sizeof(int) * N[n]);
         for(int i = 0; i < N[n]; i++)
             input[i] = N[n] - i;
@@ -75,7 +75,7 @@ int main(){
     }
 
     // SelectionSort
-   for(int n = 0; n < 3; n++){
+   for(int n = 0; n < 4; n++){
 	   int* input = malloc(sizeof(int) * N[n]);
 	   for(int i = 0; i < N[n]; i++)
 		   input[i] = N[n] - i;
@@ -97,7 +97,7 @@ int main(){
    }
 
     // InsertionSort
-    for(int n = 0; n < 3; n++){
+    for(int n = 0; n < 4; n++){
         int* input = malloc(sizeof(int) * N[n]);
         for(int i = 0; i < N[n]; i++)
             input[i] = N[n] - i;
@@ -119,7 +119,7 @@ int main(){
     }
 
     // MergeSort
-    for(int n = 0; n < 3; n++){
+    for(int n = 0; n < 4; n++){
         int* input = malloc(sizeof(int) * N[n]);
         for(int i = 0; i < N[n]; i++)
             input[i] = N[n] - i;
@@ -141,7 +141,7 @@ int main(){
     }
 
     // QuickSort
-    for(int n = 0; n < 3; n++){
+    for(int n = 0; n < 4; n++){
         int* input = malloc(sizeof(int) * N[n]);
         for(int i = 0; i < N[n]; i++)
             input[i] = N[n] - i;
@@ -163,7 +163,7 @@ int main(){
     }
 
     // RadixSort
-    for(int n = 0; n < 3; n++){
+    for(int n = 0; n < 4; n++){
         int* input = malloc(sizeof(int) * N[n]);
         for(int i = 0; i < N[n]; i++)
             input[i] = N[n] - i;
@@ -185,7 +185,7 @@ int main(){
     }
 
     // BucketSort
-    for(int n = 0; n < 3; n++){
+    for(int n = 0; n < 4; n++){
         int* input = malloc(sizeof(int) * N[n]);
         for(int i = 0; i < N[n]; i++)
             input[i] = N[n] - i;
@@ -225,7 +225,7 @@ int main(){
         printf("%15s", sortingNames[i]);
     printf("\n");
 
-    for(int i = 0; i < 3; i++){
+    for(int i = 0; i < 4; i++){
         printf("%10d", N[i]);
         for(int j = 0; j < NUM_OF_SORTING; j++)
             printf("%12ld us", result[j][i]);
